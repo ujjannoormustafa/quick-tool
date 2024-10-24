@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Post - Create and share posts in seconds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            /* background: linear-gradient(135deg, #1a202c, #2d3748); */
+            background-color: rgba(0, 0, 0);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: rgba(0, 0, 0);
+            padding-top: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        nav {
+            margin-right: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ff00cc;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc, 0 0 15px #ff00cc;
+        }
+        nav ul li a:hover::after {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ff00cc, #3399ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #e2e8f0;
+        }
+        .image-container {
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 204, 0.3), 0 0 40px rgba(51, 153, 255, 0.3);
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(45deg, #ff00cc, #3399ff);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 0, 204, 0.5), 0 0 20px rgba(51, 153, 255, 0.5);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.7), 0 0 30px rgba(51, 153, 255, 0.7);
+        }
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 8px 0;
+            margin-top: auto;
+            font-size: 12px;
+        }
+        footer p{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <div class="logo">Quick Post</div> -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="main.html">Quick Post</a></li>
+                <li><a href="noormustafa.vercel.app">About</a></li>
+                <li><a href="linkedin.com/in/noormustafadev007">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Quick Post</h1>
+        <p>Create and share posts in seconds across all your social media platforms.</p>
+        <div class="image-container">
+            <img src="bg.png" alt="Quick Post Interface">
+        </div>
+        <a href="main.html" class="btn">Get Started</a>
+    </div>
+
+    <footer>
+        <p>All Rights Reserved @QuickPost 2024 | Developed By Noor Mustafa  </p>
+    </footer>
+</body>
+</html>
