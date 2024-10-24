@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Quick Post</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mode-toggle">
+            <input type="checkbox" id="dark-mode-toggle">
+            <label for="dark-mode-toggle" class="toggle-label">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="box-container">
+                <div class="box" id="boxToDownload">
+                    <h1 id="heading">Title</h1>
+                    <p id="content">message</p>
+                </div>
+                <button class="download-btn" onclick="downloadImage()">Download</button>
+            </div>
+            <div class="input-container">
+                <input type="text" id="intro" maxlength="50" oninput="updateText()" placeholder="Enter intro (Max 7 Words)">
+                <textarea id="contentField" oninput="updateText()" placeholder="Enter content"></textarea>
+                <label for="headingSize">Heading Size: <span id="headingSizeValue">40</span>px</label>
+                <input type="range" id="headingSize" min="0" max="120" value="40" oninput="updateHeadingSize()">
+                <label for="contentSize">Content Size: <span id="contentSizeValue">24</span>px</label>
+                <input type="range" id="contentSize" min="0" max="60" value="24" oninput="updateContentSize()">
+            </div>
+        </div>
+    </div>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
